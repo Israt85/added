@@ -28,3 +28,24 @@ function addToCart(card) {
         return;
 
 }
+
+function addApplyBtn() {
+    const inputField = document.getElementById("input-field");
+    const inputFieldText = inputField.value;
+    const discount=document.getElementById("discounted-price").innerText
+    const cardPriceText = card.querySelector("p").innerText;
+
+   
+}
+
+
+
+function resetDiscount() {
+    const discountedPriceElement = document.getElementById("discounted-price");
+    discountedPriceElement.innerText = "00tk";
+
+    const totalPriceElement = document.getElementById("total-price");
+    totalPriceElement.innerText = "00tk";
+
+    window.location.href = "index.html"; 
+}
