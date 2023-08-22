@@ -9,9 +9,8 @@ function addToCart(card) {
     const li =document.createElement("li")
         li.innerText = cardTitle;
         selectedItem.appendChild(li);
-        total = total + cardPrice;
+            total = total + cardPrice;
     const totalPrice= document.getElementById("total-price")
-    // console.log(cardPrice);
 
     totalPrice.innerText= total.toFixed(2)
      const disableBtn= document.getElementById("disable-apply-btn")
@@ -29,17 +28,19 @@ function addToCart(card) {
 
 }
 
-function addApplyBtn() {
-    const inputField = document.getElementById("input-field");
-    const inputFieldText = inputField.value;
-    const discount=document.getElementById("discounted-price").innerText
-    const cardPriceText = card.querySelector("p").innerText;
 
-   
+
+function updateDiscount() {
+    const discountElement = document.getElementById("discounted-price");
+    const discount = total * 0.2;
+    discountElement.innerText = discount.toFixed(2);
+    return discount;
 }
-
-
-
+function updateTotalValue(){
+    const totalText= document.getElementById("total-text");
+    const totalValue = parseFloat(total)- parseFloat(updateDiscount());
+    totalText.innerText = totalValue
+}
 function resetDiscount() {
     const discountedPriceElement = document.getElementById("discounted-price");
     discountedPriceElement.innerText = "00tk";
