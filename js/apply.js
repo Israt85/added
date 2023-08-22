@@ -4,11 +4,11 @@ function addApplyBtn() {
     const inputFieldText = inputField.value;
     const discountedPriceElement = document.getElementById("discounted-price").innerText;
 
+
     if (inputFieldText === "SELL200") {
     
         
 
-        updateTotalPrice(originalPrice - discountAmount);
     } 
 }
 
